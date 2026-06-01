@@ -3,9 +3,14 @@ output:
   html_document:
     css: styles.css
     self_contained: true
+title: "<span style='font-size: 39px;'>Data Analysis + Visualization</span>"
 ---
+```{css, echo=FALSE}
+.title{
+  text-align: center;
+}
+```
 
-# Data Analysis + Visualization
 
 <br>
 
