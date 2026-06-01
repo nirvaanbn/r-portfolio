@@ -58,7 +58,8 @@ library(htmlwidgets)
 #Save as RDS
 #saveRDS(labproj, "labproj-bar.RDS")
 
-lab_projbar <- readRDS("r-portfolio/data/labproj-bar.RDS")
+lab_projbar <- readRDS("data/labproj-bar.RDS")
+
 #Convert the labeled columns into numbers
 lab_projbar <- lab_projbar %>%
   mutate(across(where(~inherits(., "haven_labelled")), ~as.numeric(.)))
@@ -159,7 +160,7 @@ portfolio1
 
 library("readxl")
 
-tops = read_xlsx("r-portfolio/data/Billboard Hot 100 Number Ones Database.xlsx", sheet = 2)
+tops = read_xlsx("data/Billboard Hot 100 Number Ones Database.xlsx", sheet = 2)
 
 #Adding a year column 
 tops$Year = year(tops$Date)
@@ -181,7 +182,6 @@ yearly_rap_verse = aggregate(tops$`Rap Verse in a Non-Rap Song` ~ Year, data = t
 
 tops$Explicit = as.numeric(tops$Explicit)
 tops$Genre = str_split(tops$`CDR Genre`, ";") %>% map_chr(1)
-
 
 
 #Same for explicit lyrics
@@ -228,11 +228,11 @@ rexplbygenre = tops %>%
      tooltip = paste0(Genre, " (", Year, "): ", Count, " explicit #1s:\n \n", Songs), data_id = paste0(Genre, Year))) +
   geom_col_interactive() +
   scale_y_continuous(breaks = seq(0, 15, by = 1)) +
-  scale_x_continuous(breaks = seq(1950, 2025, by = 10)) +
+  scale_x_continuous(breaks = seq(1950, 2020, by = 10)) +
   scale_fill_manual(values = pal2) +
   scale_color_manual(values = pal2) +
   theme_minimal() +
-  labs(title = "Billboard #1 Hit Songs with Explicit Lyrics, by Genre (1960-2024)", subtitle = "Data Source: Chris Dalla Riva",
+  labs(title = "Billboard #1 Hit Songs with Explicit Lyrics, by Genre (1960-2019)", subtitle = "Data Source: Chris Dalla Riva",
         x = "Year", y = NULL, fill = "Genre", color = "Genre") +
         theme_minimal() +
         theme(text = element_text(family = "ibm", size = 12)) +
@@ -255,8 +255,6 @@ portfolio2 = girafe(
     opts_tooltip(css = "background:black;color:white;padding:6px;font-family:'Special Elite';")
   )
 )
-
-
 
 ```
 
