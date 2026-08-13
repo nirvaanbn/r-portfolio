@@ -15,8 +15,9 @@ title: "<span style='font-size: 39px;'>Data Analysis + Visualization</span>"
 <br>
 
 
+<updated 8/12/26>
 
-#### <updated 8/12/26> I am currently working towards a minor in Data in Society at UC Davis, which has already taught me a great deal of applicable skills in communications. 
+#### I am currently working towards a minor in Data in Society at UC Davis, which has already taught me a great deal of applicable skills in communications. 
 <br>
 
 #### In addition to being able to create complex and thorough data visualizations programmed in R, **I can also tell persuasive stories through the data itself.**
