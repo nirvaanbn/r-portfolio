@@ -1,9 +1,10 @@
 ---
+title: "<span style='font-size: 39px;'>Data Analysis + Visualization</span>"
 output:
   html_document:
     css: styles.css
     self_contained: true
-title: "<span style='font-size: 39px;'>Data Analysis + Visualization</span>"
+  pdf_document: default
 ---
 ```{css, echo=FALSE}
 .title{
@@ -15,12 +16,12 @@ title: "<span style='font-size: 39px;'>Data Analysis + Visualization</span>"
 <br>
 
 
-<updated 8/12/26>
+<updated 9/3/26>
 
-#### I am currently working towards a minor in Data in Society at UC Davis, which has already taught me a great deal of applicable skills in communications. 
-<br>
 
-#### In addition to being able to create complex and thorough data visualizations programmed in R, **I can also tell persuasive stories through the data itself.**
+#### I "speak fluent" R for programming data visualizations, as well as for creating data analyses. I can also write code in CSS and HTML to a lesser extent.
+
+#### **More relevant to the world of communications, though, I can use the data to tell persuasive stories, incorporating more logic and numbers to what I produce.**
 <br>
 
 #### The way I see it, the world of communications has so much more to do with data than most would assume. From understanding demographic information of key publics to using data in marketing materials, I believe my skills in data interpretation and representation provide unique value to communications work.
@@ -36,8 +37,7 @@ title: "<span style='font-size: 39px;'>Data Analysis + Visualization</span>"
 
 
 
-### Interactive Barcharts:
-#### *(Move your mouse over them!)*
+### **Interactive Barcharts:**
 
 <br>
 
@@ -152,11 +152,6 @@ portfolio1 = girafe(ggobj = bar1, width_svg = 17, height_svg = 10.2)
 ```
 
 
-```{r echo=FALSE}
-
-portfolio1
-
-```
 
 
 
@@ -267,7 +262,73 @@ portfolio2 = girafe(
 ```
 
 ```{r echo=FALSE}
+library(htmltools)
+
+#div(style = "display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;",
+ #   div(style = "flex: 1 1 0; min-width: 320px;", portfolio1),
+  #  div(style = "flex: 1 1 0; min-width: 320px;", portfolio2))
+
+portfolio1
 
 portfolio2
 
+
+
 ```
+
+### **Census Data Visualizations:**
+
+
+```{r fig.show='old', out.width="49%", echo=FALSE}
+
+
+knitr::include_graphics("data/image7.png")
+
+knitr::include_graphics("data/image9.png")
+
+```
+
+```{r echo=FALSE, fig.align = 'center'}
+
+
+knitr::include_graphics("data/image8.png")
+
+
+```
+
+
+```{r fig.show='old', out.width="49%", echo=FALSE}
+
+
+knitr::include_graphics("data/image2.png")
+
+knitr::include_graphics("data/image6.png")
+
+```
+
+
+```{r echo=FALSE, fig.align = 'center'}
+
+
+knitr::include_graphics("data/image4.gif")
+
+
+```
+
+```{r echo=FALSE, fig.align = 'center'}
+
+
+knitr::include_graphics("data/image3.png")
+
+
+```
+
+```{r echo=FALSE, fig.align = 'center'}
+
+
+knitr::include_graphics("data/image11.png")
+
+
+```
+
+
